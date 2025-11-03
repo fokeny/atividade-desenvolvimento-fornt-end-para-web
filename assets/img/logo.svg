@@ -1,0 +1,7 @@
+<svg width="160" height="40" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo ONG VivaMais</title>
+  <desc id="desc">Marca minimalista com texto VivaMais e um coração estilizado</desc>
+  <rect width="160" height="40" fill="#19456B" rx="8" />
+  <text x="16" y="26" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#FFFFFF">VivaMais</text>
+  <path d="M120,14 c-3,-6 -12,-2 -12,4 c0,6 12,12 12,12 s12,-6 12,-12 c0,-6 -9,-10 -12,-4z" fill="#32C787"/>
+</svg>
