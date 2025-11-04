@@ -1,134 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Plataforma web para ONGs — presença digital profissional com projetos, voluntariado e doações.">
-    <link rel="preload" href="assets/css/styles.css" as="style">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-    <title>VivaMais — Projetos e Voluntariado</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projetos sociais da ONG VivaMais.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <title>VivaMais — Projetos</title>
+</head>
+<body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
-  <header class="site-header" role="banner">
+
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Página inicial VivaMais">
-        <img src="assets/img/logo.svg" alt="Logo VivaMais">
-        <strong>VivaMais</strong>
-      </a>
-      <nav aria-label="Navegação principal">
+      <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="Logo VivaMais"><strong>VivaMais</strong></a>
+      <input type="checkbox" id="nav-toggle" aria-label="Abrir menu">
+      <label for="nav-toggle" class="hamburger"><span class="bars"><span></span></span>Menu</label>
+      <nav id="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
+          <li class="has-submenu">
+            <details open>
+              <summary>Projetos</summary>
+              <ul>
+                <li><a href="projetos.html" aria-current="page">Todos os projetos</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#saude">Saúde</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-    <main id="conteudo" class="container">
-      <header>
-        <h1>Projetos Sociais</h1>
-        <p>Conheça nossas iniciativas e como você pode participar como doador(a) ou voluntário(a).</p>
-      </header>
+  <main id="conteudo" class="container">
+    <header class="mb-16">
+      <h1>Projetos Sociais</h1>
+      <p>Conheça nossas iniciativas e como participar.</p>
+    </header>
 
-      <section aria-labelledby="educacao">
-        <h2 id="educacao">Projeto Educação</h2>
-        <article class="card">
-          <div class="picture">
-            <picture>
-              <source
-              srcset="assets/img/project1-800.webp 800w, assets/img/project1-400.webp 400w"
-              type="image/webp">
-              <source
-              srcset="assets/img/project1-800.jpg 800w, assets/img/project1-400.jpg 400w"
-              type="image/jpeg">
-              <img
+    <section id="educacao">
+      <h2 class="mb-16">Educação</h2>
+      <div class="row">
+        <article class="card span-12 md-span-6">
+          <picture>
+            <source srcset="assets/img/project1-800.webp 800w, assets/img/project1-400.webp 400w" type="image/webp">
+            <source srcset="assets/img/project1-800.jpg 800w, assets/img/project1-400.jpg 400w" type="image/jpeg">
+            <img
               src="assets/img/project1-400.jpg"
               srcset="assets/img/project1-400.jpg 400w, assets/img/project1-800.jpg 800w"
               sizes="(max-width: 700px) 400px, 800px"
               width="800" height="500"
               alt="Aula comunitária com materiais didáticos"
               loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <h3>Reforço escolar e alfabetização</h3>
-          <p>Atividades de reforço escolar, bibliotecas itinerantes e formação de mediadores de leitura.</p>
-          <p>
-            <span class="tag">Educação</span>
-            <span class="tag">Crianças</span>
-            <span class="tag">Inclusão</span>
-          </p>
-          <p><a class="btn" href="cadastro.html">Quero ser voluntário(a)</a></p>
+          </picture>
+          <h3>Reforço escolar</h3>
+          <p>Bibliotecas itinerantes e apoio pedagógico.</p>
+          <p><span class="tag">Educação</span><span class="tag">Crianças</span><span class="tag">Inclusão</span></p>
+          <p><a class="btn" href="cadastro.html">Quero participar</a></p>
         </article>
-      </section>
+      </div>
+    </section>
 
-      <section aria-labelledby="saude">
-        <h2 id="saude">Projeto Saúde</h2>
-        <article class="card">
-          <div class="picture">
-            <picture>
-              <source
-              srcset="assets/img/project2-800.webp 800w, assets/img/project2-400.webp 400w"
-              type="image/webp">
-              <source
-              srcset="assets/img/project2-800.jpg 800w, assets/img/project2-400.jpg 400w"
-              type="image/jpeg">
-              <img
+    <section id="saude" class="mt-24">
+      <h2 class="mb-16">Saúde</h2>
+      <div class="row">
+        <article class="card span-12 md-span-6">
+          <picture>
+            <source srcset="assets/img/project2-800.webp 800w, assets/img/project2-400.webp 400w" type="image/webp">
+            <source srcset="assets/img/project2-800.jpg 800w, assets/img/project2-400.jpg 400w" type="image/jpeg">
+            <img
               src="assets/img/project2-400.jpg"
               srcset="assets/img/project2-400.jpg 400w, assets/img/project2-800.jpg 800w"
               sizes="(max-width: 700px) 400px, 800px"
               width="800" height="500"
               alt="Ação de saúde preventiva na comunidade"
               loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <h3>Prevenção e bem‑estar</h3>
-          <p>Campanhas de vacinação, oficinas de alimentação saudável e monitoramento de indicadores.</p>
-          <p>
-            <span class="tag">Saúde</span>
-            <span class="tag">Prevenção</span>
-            <span class="tag">Comunidade</span>
-          </p>
-          <p>
-            <a class="btn" href="cadastro.html">Inscrever-me</a>
-            <button class="btn" type="button" disabled aria-disabled="true">Doar (em breve)</button>
-          </p>
+          </picture>
+          <h3>Prevenção e bem-estar</h3>
+          <p>Campanhas de vacinação e oficinas de hábitos saudáveis.</p>
+          <p><span class="tag">Saúde</span><span class="tag">Prevenção</span><span class="tag">Comunidade</span></p>
+          <p><a class="btn" href="cadastro.html">Quero participar</a></p>
         </article>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section aria-labelledby="como-ajudar">
-        <h2 id="como-ajudar">Como doar e apoiar</h2>
-        <p>Em breve, nossa plataforma aceitará doações on‑line com metas e acompanhamento de resultados em tempo real.</p>
-        <p>Enquanto isso, entre em contato pelo e‑mail <a href="mailto:contato@vivamais.org">contato@vivamais.org</a>.</p>
-      </section>
-    </main>
-  <footer role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
-      <div class="grid-3">
-        <div>
+      <div class="row">
+        <div class="span-12 md-span-4">
           <h3>Sobre a VivaMais</h3>
-          <p>ONG fictícia para fins acadêmicos. Missão: ampliar o impacto social com tecnologia e transparência.</p>
+          <p>ONG fictícia para fins acadêmicos.</p>
         </div>
-        <div>
+        <div class="span-12 md-span-4">
           <h3>Contato</h3>
-          <address>
-            Rua Solidária, 123 – Centro – São Luís/MA<br>
-            E-mail: <a href="mailto:contato@vivamais.org">contato@vivamais.org</a><br>
-            Telefone: <a href="tel:+559899999999">+55 (98) 99999-9999</a>
-          </address>
+          <address>Rua Solidária, 123 – São Luís/MA • <a href="mailto:contato@vivamais.org">contato@vivamais.org</a></address>
         </div>
-        <div>
+        <div class="span-12 md-span-4">
           <h3>Transparência</h3>
-          <p>Acompanhe relatórios e resultados no nosso portal de documentos públicos.</p>
-          <a class="btn" href="#" aria-disabled="true">Ver Relatórios (em breve)</a>
+          <button class="btn" type="button" disabled aria-disabled="true">Doar (em breve)</button>
         </div>
       </div>
-      <p style="margin-top:1rem">© 2025 VivaMais — Construído para a Entrega I (HTML5)</p>
+      <p class="mt-16">© 2025 VivaMais</p>
     </div>
   </footer>
-
-  </body>
+</body>
 </html>

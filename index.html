@@ -1,110 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="Plataforma web para ONGs — presença digital profissional com projetos, voluntariado e doações.">
-    <link rel="preload" href="assets/css/styles.css" as="style">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-    <title>VivaMais — Início</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma para ONGs com leiaute responsivo e acessível.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <title>VivaMais — Início</title>
+</head>
+<body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Página inicial VivaMais">
         <img src="assets/img/logo.svg" alt="Logo VivaMais">
         <strong>VivaMais</strong>
       </a>
-      <nav aria-label="Navegação principal">
+
+      <!-- Hambúrguer (sem JS) -->
+      <input type="checkbox" id="nav-toggle" aria-label="Abrir menu">
+      <label for="nav-toggle" class="hamburger"><span class="bars"><span></span></span>Menu</label>
+
+      <nav id="primary-nav" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li class="has-submenu">
+            <details>
+              <summary>Projetos</summary>
+              <ul>
+                <li><a href="projetos.html">Todos os projetos</a></li>
+                <li><a href="projetos.html#educacao">Educação</a></li>
+                <li><a href="projetos.html#saude">Saúde</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-    <main id="conteudo">
-      <section class="hero">
-        <div class="container grid">
-          <div>
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="span-12 lg-span-7">
             <h1>Missão, Visão e Valores</h1>
-            <p>Somos a VivaMais, uma organização sem fins lucrativos dedicada a educação e saúde comunitária. Acreditamos no poder do voluntariado e da transparência para transformar realidades.</p>
+            <p>Somos a VivaMais, uma organização sem fins lucrativos dedicada à educação e saúde comunitária.</p>
             <p><span class="badge">Visão</span> Ser referência em impacto social medido e compartilhado.</p>
             <p><span class="badge">Valores</span> Empatia • Transparência • Colaboração</p>
-            <p><a class="btn" href="projetos.html">Conheça nossos projetos</a></p>
+            <p><a class="btn" href="#modal-transparencia">Transparência</a></p>
           </div>
-          <div class="overlay picture">
+          <div class="span-12 lg-span-5 overlay">
             <picture>
-              <source 
-              srcset="assets/img/hero-1200.webp 1200w, assets/img/hero-600.webp 600w"
-              type="image/webp">
-              <source 
-              srcset="assets/img/hero-1200.jpg 1200w, assets/img/hero-600.jpg 600w"
-              type="image/jpeg">
-              <img src="assets/img/hero-600.jpg"
-              srcset="assets/img/hero-600.jpg 600w, assets/img/hero-1200.jpg 1200w"
-              sizes="(max-width: 768px) 600px, 1200px"
-              width="1200" height="600"
-              alt="Ações comunitárias da ONG VivaMais"
-              loading="eager" decoding="async">
+              <source srcset="assets/img/hero-1200.webp 1200w, assets/img/hero-600.webp 600w" type="image/webp">
+              <source srcset="assets/img/hero-1200.jpg 1200w, assets/img/hero-600.jpg 600w" type="image/jpeg">
+              <img
+                src="assets/img/hero-600.jpg"
+                srcset="assets/img/hero-600.jpg 600w, assets/img/hero-1200.jpg 1200w"
+                sizes="(max-width: 768px) 600px, 1200px"
+                width="1200" height="600"
+                alt="Ações comunitárias da ONG VivaMais"
+                loading="eager" decoding="async">
             </picture>
-            <div class="overlay-text">Transparência e impacto que você pode ver</div>
+            <div class="overlay-text">Impacto que você pode ver</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="container">
-        <h2>Histórico e Conquistas</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3>+5 mil atendimentos</h3>
-            <p>Atendimentos de saúde preventiva em comunidades vulneráveis desde 2022.</p>
-          </article>
-          <article class="card">
-            <h3>Parcerias locais</h3>
-            <p>Rede com escolas e postos de saúde para potencializar resultados.</p>
-          </article>
-          <article class="card">
-            <h3>Relatórios anuais</h3>
-            <p>Publicação de resultados e prestação de contas para doadores e sociedade.</p>
-          </article>
-        </div>
-      </section>
+    <section class="container">
+      <h2>Histórico e Conquistas</h2>
+      <div class="row">
+        <article class="card span-12 md-span-4"><h3>+5 mil atendimentos</h3><p>Saúde preventiva desde 2022.</p></article>
+        <article class="card span-12 md-span-4"><h3>Parcerias locais</h3><p>Rede com escolas e postos de saúde.</p></article>
+        <article class="card span-12 md-span-4"><h3>Relatórios anuais</h3><p>Resultados e prestação de contas.</p></article>
+      </div>
+    </section>
 
-      <section class="container">
-        <h2>Equipe e Estrutura</h2>
-        <div class="picture">
-          <picture>
-            <source 
-            srcset="assets/img/team-800.webp 800w, assets/img/team-400.webp 400w"
-            type="image/webp">
-            <source 
-            srcset="assets/img/team-800.jpg 800w, assets/img/team-400.jpg 400w"
-            type="image/jpeg">
-            <img src="assets/img/team-400.jpg"
-            srcset="assets/img/team-400.jpg 400w, assets/img/team-800.jpg 800w"
-            sizes="(max-width: 700px) 400px, 800px"
-            width="800" height="500"
-            alt="Equipe da ONG reunida"
-            loading="lazy" decoding="async">
-          </picture>
+    <section class="container">
+      <h2>Demonstração de Componentes</h2>
+      <div class="row">
+        <div class="span-12 md-span-6">
+          <div class="alert info" role="status">Informativo: inscrições abertas para o Projeto Educação.</div>
+          <div class="alert success" role="status">Sucesso: sua inscrição foi recebida!</div>
+          <div class="alert warning" role="status">Aviso: vagas limitadas para a próxima turma.</div>
+          <div class="alert danger" role="status">Erro: houve um problema ao enviar o formulário.</div>
+          <p class="mt-16"><a class="btn" href="#toast1">Mostrar toast</a></p>
+          <div id="toast1" class="toast">Ação concluída! <a class="close" href="#">Fechar</a></div>
         </div>
-        <p>Profissionais e voluntários com experiência em educação, saúde e gestão de projetos sociais.</p>
-      </section>
-    </main>
-  <footer>
+        <div class="span-12 md-span-6">
+          <a class="btn" href="#modal-transparencia">Abrir modal</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      <div class="grid-3">
-        <div>
+      <div class="row">
+        <div class="span-12 md-span-4">
           <h3>Sobre a VivaMais</h3>
           <p>ONG fictícia para fins acadêmicos. Missão: ampliar o impacto social com tecnologia e transparência.</p>
         </div>
-        <div>
+        <div class="span-12 md-span-4">
           <h3>Contato</h3>
           <address>
             Rua Solidária, 123 – Centro – São Luís/MA<br>
@@ -112,15 +116,25 @@
             Telefone: <a href="tel:+559899999999">+55 (98) 99999-9999</a>
           </address>
         </div>
-        <div>
+        <div class="span-12 md-span-4">
           <h3>Transparência</h3>
-          <p>Acompanhe relatórios e resultados no nosso portal de documentos públicos.</p>
           <button class="btn" type="button" disabled aria-disabled="true">Ver Relatórios (em breve)</button>
         </div>
       </div>
-      <p style="margin-top:1rem">© 2025 VivaMais — Construído para a Entrega I (HTML5)</p>
+      <p class="mt-16">© 2025 VivaMais </p>
     </div>
   </footer>
 
-  </body>
+  <!-- Modal CSS-only via :target -->
+  <div id="modal-transparencia" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+      <header>
+        <h3 id="m-title">Transparência</h3>
+        <a class="close" href="#" aria-label="Fechar">×</a>
+      </header>
+      <p>Prestação de contas e metas estarão disponíveis na próxima entrega.</p>
+      <p class="mt-16"><a class="btn" href="#" aria-label="Fechar modal">Entendi</a></p>
+    </div>
+  </div>
+</body>
 </html>

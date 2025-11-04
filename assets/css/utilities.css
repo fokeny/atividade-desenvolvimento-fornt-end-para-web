@@ -1,0 +1,8 @@
+
+/* utilities.css — auxiliares */
+.hide{display:none!important} .show{display:block!important} .text-center{text-align:center}
+.mt-16{margin-top:var(--sp-16)} .mt-24{margin-top:var(--sp-24)} .mt-32{margin-top:var(--sp-32)}
+.mb-16{margin-bottom:var(--sp-16)} .mb-24{margin-bottom:var(--sp-24)} .mb-32{margin-bottom:var(--sp-32)}
+.p-16{padding:var(--sp-16)} .p-24{padding:var(--sp-24)} .p-32{padding:var(--sp-32)}
+.rounded{border-radius:12px}
+.shadow{box-shadow:0 6px 20px rgba(2,6,23,.08)}

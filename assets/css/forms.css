@@ -1,0 +1,13 @@
+
+/* forms.css — estilização + validação visual (nativa) */
+form{background:var(--paper);border-radius:16px;box-shadow:0 6px 20px rgba(2,6,23,.08);padding:var(--sp-16)}
+fieldset{border:2px solid var(--neutral-200);border-radius:12px;margin:var(--sp-16) 0;padding:var(--sp-16)}
+legend{padding:0 .5rem;font-weight:800}
+label{display:block;font-weight:600;margin-top:.75rem}
+input,select,textarea{width:100%;padding:.75rem;border:1px solid var(--neutral-300);border-radius:8px;background:#fff}
+input:focus,select:focus,textarea:focus{border-color:var(--accent-500);outline:3px solid rgba(14,165,233,.25);outline-offset:1px}
+input:invalid, select:invalid, textarea:invalid{border-color:var(--danger-500);background:#fff1f2}
+input:valid, select:valid, textarea:valid{border-color:var(--success-500);background:#f0fff4}
+.help{color:var(--neutral-600);font-size:.875rem}
+.form-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+.field-hint{font-size:.85rem;color:var(--neutral-600);margin-top:.25rem}
