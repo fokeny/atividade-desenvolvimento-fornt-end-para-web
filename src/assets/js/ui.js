@@ -1,0 +1,1 @@
+import{$$}from'./core/dom.js';export function enhanceNav(){const hp=(location.hash.replace(/^#\/?/,'').split('?')[0]||'');$$('a[data-link]').forEach(a=>{const h=a.getAttribute('href').replace(/^#\/?/,'').split('?')[0];if(h===hp)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}

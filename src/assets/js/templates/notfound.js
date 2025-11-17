@@ -1,0 +1,1 @@
+export default function notfound(){return{template:`<section class='container'><h1>Página não encontrada</h1><p>Tente voltar ao <a href='#/'>início</a>.</p></section>`}}

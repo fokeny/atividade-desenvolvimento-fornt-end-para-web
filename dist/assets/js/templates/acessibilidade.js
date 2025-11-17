@@ -1,0 +1,1 @@
+import{html}from'../core/dom.js';export default function acessibilidade(){const t=html`<section class='container'><h1>Acessibilidade</h1><p>WCAG 2.1 AA: navegação por teclado, foco visível, contraste mínimo 4.5:1, leitores de tela, alto contraste e modo escuro. Preferências salvas (localStorage) e respeito a prefers-reduced-motion.</p></section>`;return{template:t};}

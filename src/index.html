@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma SPA para ONGs — VivaMais (projeto unificado I–IV)">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <title>VivaMais — Plataforma Única (Entregas I–IV)</title>
+</head>
+<body>
+  <a class="skip-link" href="#app">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#/" aria-label="Início VivaMais">
+        <img src="assets/img/logo.svg" alt="Logo VivaMais">
+        <strong>VivaMais</strong>
+      </a>
+      <div class="theme-switch" role="group" aria-label="Tema">
+        <button id="btnLight" aria-pressed="false" aria-label="Tema claro">Claro</button>
+        <button id="btnDark" aria-pressed="false" aria-label="Tema escuro">Escuro</button>
+        <button id="btnHC" aria-pressed="false" aria-label="Alto contraste">Alto contraste</button>
+      </div>
+      <input type="checkbox" id="nav-toggle" aria-label="Abrir menu">
+      <label for="nav-toggle" class="hamburger"><span class="bars"><span></span></span>Menu</label>
+      <nav id="primary-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#/" data-link>Início</a></li>
+          <li class="has-submenu">
+            <details>
+              <summary>Projetos</summary>
+              <ul>
+                <li><a href="#/projetos" data-link>Todos os projetos</a></li>
+                <li><a href="#/projetos?cat=educacao" data-link>Educação</a></li>
+                <li><a href="#/projetos?cat=saude" data-link>Saúde</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#/cadastro" data-link>Cadastro</a></li>
+          <li><a href="#/acessibilidade" data-link>Acessibilidade</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app-root" tabindex="-1" aria-live="polite" aria-busy="false"></main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="span-12 md-span-4">
+          <h3>Sobre a VivaMais</h3>
+          <p>ONG fictícia para fins acadêmicos.</p>
+        </div>
+        <div class="span-12 md-span-4">
+          <h3>Contato</h3>
+          <address>Rua Solidária, 123 – São Luís/MA • <a href="mailto:contato@vivamais.org">contato@vivamais.org</a></address>
+        </div>
+        <div class="span-12 md-span-4">
+          <h3>Transparência</h3>
+          <button class="btn" type="button" disabled aria-disabled="true">Relatórios (em breve)</button>
+        </div>
+      </div>
+      <p class="mt-16">© 2025 VivaMais — Projeto Unificado</p>
+    </div>
+  </footer>
+
+  <noscript><div class="container"><div class="alert warning">Ative o JavaScript para usar a aplicação.</div></div></noscript>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

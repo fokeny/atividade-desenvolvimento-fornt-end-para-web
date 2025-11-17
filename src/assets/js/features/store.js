@@ -1,0 +1,1 @@
+const KEY='vivamais_cadastros';export const getCadastros=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return[]}};export const saveCadastro=i=>{const a=getCadastros();a.push({...i,createdAt:new Date().toISOString()});localStorage.setItem(KEY,JSON.stringify(a));};export const clearCadastros=()=>localStorage.removeItem(KEY);
